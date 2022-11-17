@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "gympal"
+    "default": "gym-pal"
   },
   "targets": {
-    "gym-pal-b5c53": {
+    "gym-pal": {
       "hosting": {
         "gym-pal": [
-          "gympal"
+          "gym-pal"
         ]
       }
     }
