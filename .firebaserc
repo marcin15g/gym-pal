@@ -1,5 +1,16 @@
 {
   "projects": {
     "default": "gym-pal-c8013"
-  }
+  },
+  "targets": {
+    "gym-pal-c8013": {
+      "hosting": {
+        "gym-pal": [
+          "gym-pal-c8013",
+          "gym-pal-online"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
