@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "dist/gym-pal",
+    "site": "gym-pal-online",
     "ignore": [
       "firebase.json",
       "**/.*",
