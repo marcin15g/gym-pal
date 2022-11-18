@@ -6,14 +6,14 @@
     "gym-pal": {
       "hosting": {
         "gym-pal": [
-          "gym-pal"
+          "gympal"
         ]
       }
     },
     "gym-pal-b5c53": {
       "hosting": {
         "gym-pal": [
-          "gym-pal"
+          "gympal"
         ]
       }
     }
