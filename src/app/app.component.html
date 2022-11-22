@@ -1,7 +1,28 @@
 <mat-toolbar color="primary">
-    <span>Gym Pal TEST DEPLOY</span>
-    <button routerLink="/login" routerLinkActive="active">Login</button>
-    <button routerLink="/diet" routerLinkActive="active">Diet</button>
-    <button routerLink="/trainings" routerLinkActive="active">Traning</button>
+    <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="fitness_center"></mat-icon>
+    <span class="title" routerLink="/">GymPal</span>
+    <span class="spacer"></span>
+    <button 
+        class="nav-btn" 
+        mat-raised-button 
+        color="primary" 
+        routerLink="/login" 
+        routerLinkActive="active"
+    >Login</button>
+    <button 
+        class="nav-btn" 
+        mat-raised-button 
+        color="primary" 
+        routerLink="/diet" 
+        routerLinkActive="active"
+    >Diet</button>
+    <button 
+        class="nav-btn" 
+        mat-raised-button 
+        color="primary" 
+        routerLink="/trainings" 
+        routerLinkActive="active"
+    >Traning</button>
 </mat-toolbar>
+
 <router-outlet></router-outlet>

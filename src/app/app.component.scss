@@ -1,0 +1,32 @@
+@font-face {
+    font-family: Marhey;
+    src: url(../assets/fonts/Marhey.ttf);
+}
+
+mat-toolbar {
+    display: flex;
+
+    mat-icon {
+        width: auto;
+        height: auto;
+        margin: 0 5px;
+        font-size: 2em;
+    }
+    span.title {
+        font-size: 2rem;
+        font-family: 'Marhey', cursive; 
+        font-weight: 700;
+        padding-top: 3px;
+        cursor: pointer;
+    }
+
+    .spacer {
+        flex-grow: 1;
+    }
+
+    button.nav-btn {
+        font-family: 'Marhey';
+        font-weight: 700;
+        margin: 0 1em;
+    }
+}
