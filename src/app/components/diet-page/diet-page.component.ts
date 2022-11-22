@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import { State } from '../../store/reducers/main.state'
+
+import * as DietCalculatorSelector from '../../store/selectors/dietCalculator.selectors'
 
 @Component({
   selector: 'app-diet-page',
@@ -7,9 +12,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DietPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private store: Store<State>
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  test(){
+    this.store.select(DietCalculatorSelector.getAllProductSelector).subscribe( res => {
+      console.table(res.products)
+    })
   }
 
 }

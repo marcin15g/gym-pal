@@ -6,6 +6,6 @@ export interface State {
     dietCalculator: ICalculatorModel
 }
 
-export const reducer: ActionReducerMap<State> = {
+export const reducers: ActionReducerMap<State> = {
     dietCalculator: createDietCalculatorReducer
 }

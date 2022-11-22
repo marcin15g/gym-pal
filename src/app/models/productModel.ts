@@ -1,5 +1,5 @@
 export interface ICalculatorModel {
-    product: IProductModel[]
+    products: IProductModel[]
 }
 
 export interface IProductModel {

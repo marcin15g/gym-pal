@@ -4,17 +4,30 @@ import { ICalculatorModel, IProductModel } from '../../models/productModel'
 
 
 export const initialState: ICalculatorModel = {
-    product: []
+    products: [
+        {
+            name: "siema",
+            protein: 2,
+            fat: 3,
+            carbo: 3,
+        },
+        {
+            name: "siema",
+            protein: 2,
+            fat: 3,
+            carbo: 3,
+        }
+    ]
 };
 
 const dietCalculatorReducer = createReducer(
     initialState,
     on(DietCalculatorAction.setProductAction, (state, { payload }) => ({
-        product: payload
+        products: payload
     })),
     on(DietCalculatorAction.addNewProductAction, (state, { payload }) => ({
-        product: [
-            ...state.product, 
+        products: [
+            ...state.products, 
             payload
         ]
     }))
