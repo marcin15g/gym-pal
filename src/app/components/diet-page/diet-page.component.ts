@@ -20,7 +20,7 @@ export class DietPageComponent implements OnInit {
   }
 
   test(){
-    this.store.select(DietCalculatorSelector.getAllProductSelector).subscribe( res => {
+    this.store.select(DietCalculatorSelector.getAllProductsSelector).subscribe( res => {
       console.table(res.products)
     })
   }
