@@ -23,12 +23,11 @@
         routerLink="/trainings" 
         routerLinkActive="active"
     >Traning</button>
-    <button mat-fab [matMenuTriggerFor]="menu">
-        <img *ngIf="authService.userData as user" src="{{user.photoURL}}" alt="">
-    </button>
+    <img class="avatar" src="{{ authService.userData?.photoURL || './assets/dummy.jpg' }}" [matMenuTriggerFor]="menu">
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>Log out</button>
+        <button mat-menu-item (click)="authService.signOut()">Log out</button>
     </mat-menu>
+
 </mat-toolbar>
 
 <router-outlet></router-outlet>

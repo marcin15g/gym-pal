@@ -10,4 +10,5 @@ export class AppComponent {
   title = 'gym-pal';
 
   constructor (public authService: AuthService) {}
+
 }

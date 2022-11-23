@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
   providedIn: 'root',
 })
 export class AuthService {
-  userData: any; 
+  userData: any | undefined; 
 
   constructor (
     public afs: AngularFirestore, 
@@ -74,6 +74,7 @@ export class AuthService {
   signOut() {
     return this.afAuth.signOut().then(() => {
       localStorage.removeItem('user');
+      this.userData = null;
       this.router.navigate(['login']);
     });
   }
