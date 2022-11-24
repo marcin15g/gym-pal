@@ -14,7 +14,7 @@ import { TraningPageComponent } from './components/traning-page/traning-page.com
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { reducers } from './store/reducers/main.state'
 
-import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireModule, FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -50,7 +50,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     // provideFirestore(() => getFirestore()),
   ],
   providers: [
-    AuthService
+    AuthService,
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase }
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { AuthService } from 'src/app/services/auth.service';
+import { environment } from 'src/environments/environment';
 
 import { LoginPageComponent } from './login-page.component';
 
@@ -8,7 +12,11 @@ describe('LoginPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginPageComponent ]
+      imports: [
+        AngularFireModule.initializeApp(environment.firebase),
+      ],
+      declarations: [ LoginPageComponent ],
+      providers: [  AuthService ]
     })
     .compileComponents();
 
