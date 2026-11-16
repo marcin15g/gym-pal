@@ -29,4 +29,10 @@ mat-toolbar {
         font-weight: 700;
         margin: 0 1em;
     }
+
+    img.avatar {
+        height: 80%;
+        border-radius: 50%;
+        cursor: pointer;
+    }
 }

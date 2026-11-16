@@ -23,6 +23,11 @@
         routerLink="/trainings" 
         routerLinkActive="active"
     >Traning</button>
+    <img class="avatar" src="{{ authService.userData?.photoURL || './assets/dummy.jpg' }}" [matMenuTriggerFor]="menu">
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="authService.signOut()">Log out</button>
+    </mat-menu>
+
 </mat-toolbar>
 
 <router-outlet></router-outlet>
